@@ -1,0 +1,24 @@
+{
+  "name": "testcafe-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./allure",
+    "test": "npm run clean && testcafe chrome test/test/*.js --reporter allure",
+    "test:safari": "npm run clean && testcafe safari test/test/*.js --reporter allure",
+    "allure": "allure generate allure/allure-results --clean -o allure/allure-report && allure open allure/allure-report"
+  },
+  "keywords": [
+    "testcafe",
+    "javascript"
+  ],
+  "author": "",
+  "dependencies": {
+    "allure-commandline": "^2.17.2",
+    "rimraf": "^3.0.2",
+    "testcafe": "^1.19.0",
+    "testcafe-browser-tools": "^2.0.23",
+    "testcafe-reporter-allure": "^1.0.5"
+  }
+}
